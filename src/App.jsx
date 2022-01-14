@@ -4,14 +4,14 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
 } from "react-router-dom";
 import Account from "components/Account";
-import { Layout} from "antd";
+import { Layout } from "antd";
 import "antd/dist/antd.css";
 import "./style.css";
-import Main from "components/Main"
-const { Header} = Layout;
+import Main from "components/Main";
+const { Header } = Layout;
 
 const styles = {
   content: {
@@ -64,19 +64,23 @@ const App = ({ isServerInfo }) => {
         <div style={styles.content}>
           <Switch>
             <Route path="/main">
-                <Main/>
+              <Main />
             </Route>
             <Route path="/nonauthenticated">
               <h3>Please login using the "Authenticate" button</h3>
             </Route>
           </Switch>
-          {isAuthenticated ? <Redirect to="/main" /> : <Redirect to="/nonauthenticated" />}
+          {isAuthenticated ? (
+            <Redirect to="/main" />
+          ) : (
+            <Redirect to="/nonauthenticated" />
+          )}
         </div>
       </Router>
     </Layout>
   );
 };
 
-export const Logo = () => <h4>Decentradit</h4>
+export const Logo = () => <h4>Stake Overflow</h4>;
 
 export default App;
