@@ -7,6 +7,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import Account from "components/Account";
+import Chains from "components/Chains";
 import { Layout } from "antd";
 import "antd/dist/antd.css";
 import "./style.css";
@@ -58,6 +59,7 @@ const App = ({ isServerInfo }) => {
         <Header style={styles.header}>
           <Logo />
           <div style={styles.headerRight}>
+            <Chains/>
             <Account />
           </div>
         </Header>

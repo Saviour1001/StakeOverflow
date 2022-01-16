@@ -58,13 +58,9 @@ const Feed = () => {
             </Paragraph>
             <Paragraph>
               {" "}
-              All data will be stored on moralis IPFS can be accessed from
-              Polygon blockchain.
+              Currently works on Polygon Mumbai testnet. 
             </Paragraph>
-            <Paragraph>
-              {" "}
-              Donate polygon to your favourite answers !!
-            </Paragraph>
+            
 
             <Title level={5}>
               Choose the categories !
