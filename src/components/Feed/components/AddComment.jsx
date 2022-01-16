@@ -4,24 +4,23 @@ import { useWeb3ExecuteFunction } from "react-moralis";
 import { useState } from "react";
 import { message } from "antd";
 
-const AddPost = () => {
+const AddComment = (props) => {
   const { contractABI, contractAddress, selectedCategory } = useMoralisDapp();
   const contractABIJson = JSON.parse(contractABI);
   const ipfsProcessor = useMoralisFile();
   const contractProcessor = useWeb3ExecuteFunction();
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
   const [file, setFile] = useState();
+  const [content, setContent] = useState("");
 
-  async function addPost(post) {
-    const contentUri = await processContent(post);
+  async function addComment(comment) {
+    const contentUri = await processContent(comment);
     const categoryId = selectedCategory["categoryId"];
     const options = {
       contractAddress: contractAddress,
       functionName: "createPost",
       abi: contractABIJson,
       params: {
-        _parentId: "0x91",
+        _parentId: props.parentId,
         _contentUri: contentUri,
         _categoryId: categoryId,
       },
@@ -37,7 +36,6 @@ const AddPost = () => {
     const imageUrl = file !== undefined ? await processImage(file) : undefined;
 
     const params = {
-      title: title,
       content: content,
       image: imageUrl,
     };
@@ -58,24 +56,21 @@ const AddPost = () => {
   };
 
   const validateForm = () => {
-    let result = !title || !content ? false : true;
+    let result = !content ? false : true;
     return result;
   };
 
   const clearForm = () => {
-    setTitle("");
-    setContent("");
     setFile("");
+    setContent("");
   };
 
   function onSubmit(e) {
     e.preventDefault();
     if (!validateForm()) {
-      return message.error(
-        "Remember to add the title and the content of your post"
-      );
+      return message.error("Remember to add the content of your comment");
     }
-    addPost({ title, content });
+    addComment({ content });
     clearForm();
   }
 
@@ -83,18 +78,11 @@ const AddPost = () => {
     <form onSubmit={onSubmit}>
       <div className='row'>
         <div className='form-group'>
-          <input
-            type='text'
-            className='mb-2 mt-2 form-control'
-            placeholder='Title'
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
           <textarea
             type='text'
             className='mb-2 form-control'
-            placeholder='Post away'
-            rows='5'
+            placeholder='Comment'
+            rows='1'
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />
@@ -105,7 +93,7 @@ const AddPost = () => {
             onChange={async (e) => setFile(e.target.files[0])}
           />
         </div>
-        <button type='submit' className='btn btn-dark '>
+        <button type='submit' className='btn btn-dark'>
           Submit
         </button>
       </div>
@@ -113,4 +101,4 @@ const AddPost = () => {
   );
 };
 
-export default AddPost;
+export default AddComment;
