@@ -83,8 +83,17 @@ const App = ({ isServerInfo }) => {
   );
 };
 
-export const Logo = () => <h4>Stake Overflow</h4>;
+export const Logo = () => (
+  <div style={{display: "flex", alignItems: "center"}}>
+    <img height='30px' 
+    width='30px'
+    alt='overflowlogo' 
+    src='https://user-images.githubusercontent.com/81305824/149787348-2b8f1b69-5c2b-486d-8713-3fb2646895a9.png'
+    />
+    <h4 style={{marginLeft: "0.2rem"}}>Stake Overflow</h4>
+  </div>
+);
 
 export default App;
 
-//<img style={height: "100px", width: "100px"} src={"https://user-images.githubusercontent.com/81305824/149787348-2b8f1b69-5c2b-486d-8713-3fb2646895a9.png"} />
+// 

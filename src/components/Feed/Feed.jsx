@@ -52,7 +52,7 @@ const Feed = () => {
                 />
               </p>
               <Title level={3}>
-              Stack overflow 3.0
+              Stack Overflow 3.0
               </Title>
             </Paragraph>
             <Paragraph>
