@@ -82,7 +82,7 @@ function Donate(props) {
       <Input
         type='number'
         size='large'
-        style={{ width: "20%" }}
+        style={{ height: "4%", width: "20%", margin: "0.5rem", borderColor: "#b8daff"}}
         onChange={(e) => {
           setAmount(`${e.target.value}`);
         }}
@@ -90,7 +90,7 @@ function Donate(props) {
       <button
         type='primary'
         size='large'
-        style={{ width: "10%" }}
+        style={{ height: "5%", width: "15%", background: "#b8daff", color: "black", borderRadius: "5px", borderWidth: "2px" }}
         loading={isPending}
         onClick={() => DoDonate("donate")}
         disabled={!tx}

@@ -105,7 +105,7 @@ const AddPost = () => {
             onChange={async (e) => setFile(e.target.files[0])}
           />
         </div>
-        <button type='submit' className='btn btn-dark '>
+        <button type='submit' className='btn btn-dark'>
           Submit
         </button>
       </div>

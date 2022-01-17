@@ -22,7 +22,7 @@ const Feed = () => {
         <div
           style={{
             ...glStyles.card,
-            padding: "10px 13px",
+            padding: "10px 50px 20px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -37,11 +37,12 @@ const Feed = () => {
                   alignItems: "center",
                   margin: "auto",
                   width: "100%",
+                  fontFamily: "Poppins",
                   textAlign: "center",
                 }}
               >
                 <img
-                  style={{ display: "inline-block", verticalAlign: "middle" }}
+                  style={{ display: "inline-block", verticalAlign: "middle", marginLeft: "16rem" }}
                   src={
                     "https://content.presspage.com/uploads/2658/c800_logo-stackoverflow-square.jpg?98978"
                   }
@@ -50,8 +51,17 @@ const Feed = () => {
                   height='200'
                 />
               </p>
-              <Title level={3}>Stack overflow 3.0</Title>
-              Post your questions !! 
+              <Title level={3}>
+              Stack overflow 3.0
+              </Title>
+            </Paragraph>
+            <Paragraph>
+            <p style={
+                {
+                  paddingBottom: "3rem",
+                }
+              } />
+            Post your questions !! 
             </Paragraph>
             <Paragraph>
               Reputation system works on the basis of upvotes and downvotes.
@@ -63,6 +73,11 @@ const Feed = () => {
             
 
             <Title level={5}>
+            <p style={
+                {
+                  paddingBottom: "3rem",
+                }
+              } />
               Choose the categories !
             </Title>
           </Typography>
@@ -76,6 +91,7 @@ const Feed = () => {
           style={{
             ...glStyles.card,
             padding: "10px 13px",
+            marginBottom: "10px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
