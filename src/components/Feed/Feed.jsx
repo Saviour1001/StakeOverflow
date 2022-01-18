@@ -42,7 +42,7 @@ const Feed = () => {
                 }}
               >
                 <img
-                  style={{ display: "inline-block", verticalAlign: "middle", marginLeft: "16rem" }}
+                  style={{ display: "inline-block", verticalAlign: "middle", marginLeft: "10rem" }}
                   src={
                     "https://content.presspage.com/uploads/2658/c800_logo-stackoverflow-square.jpg?98978"
                   }
@@ -51,9 +51,11 @@ const Feed = () => {
                   height='200'
                 />
               </p>
+              <div style={{textAlign: "center", marginLeft: "11rem", fontFamily: "Libre Baskerville"}}>
               <Title level={3}>
               Stack Overflow 3.0
               </Title>
+              </div>
             </Paragraph>
             <Paragraph>
             <p style={
@@ -68,18 +70,19 @@ const Feed = () => {
             </Paragraph>
             <Paragraph>
               {" "}
-              Currently works on Polygon Mumbai testnet. 
+              Currently works on Polygon Mumbai Testnet. 
             </Paragraph>
-            
 
+            <div style={{textAlign: "center", marginLeft: "11rem"}}>
             <Title level={5}>
             <p style={
                 {
                   paddingBottom: "3rem",
                 }
               } />
-              Choose the categories !
+              Choose the categories and start exploring!
             </Title>
+            </div>
           </Typography>
         </div>
       </div>
@@ -97,7 +100,7 @@ const Feed = () => {
             justifyContent: "space-between",
           }}
         >
-          <h4>
+          <h4 style={{fontFamily: "Libre Baskerville"}}>
             {" "}
             Your Reputation in {selectedCategory["category"]} is <Reputation />{" "}
           </h4>
