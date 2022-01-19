@@ -170,7 +170,7 @@ const Post = ({ post }) => {
 
   const result = (
     <Comment
-      style={{ ...glStyles.card, padding: "0px 15px", marginBottom: "10px" }}
+      style={{ ...glStyles.card, padding: "0px 15px", marginBottom: "10px", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", }}
       actions={actions}
       content={
         <>
