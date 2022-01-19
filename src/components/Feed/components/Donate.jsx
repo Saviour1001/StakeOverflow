@@ -6,6 +6,7 @@ import {
 } from "react-moralis";
 import { useEffect, useState } from "react";
 import { Input, message } from "antd";
+import Matic from "../img/maticToken.png";
 
 function Donate(props) {
   const { Moralis } = useMoralis();
@@ -76,26 +77,51 @@ function Donate(props) {
       onError: (error) => console.error(error),
     });
   }
+  var height = 5;
+  var width = 5;
 
   return (
     <div>
       <Input
-        type='number'
-        size='large'
-        style={{ height: "4%", width: "20%", margin: "0.5rem", borderColor: "#b8daff"}}
+        type="number"
+        size="large"
+        placeholder="Amount"
+        style={{
+          height: "4%",
+          width: "20%",
+          margin: "0.5rem",
+          borderColor: "#b8daff",
+        }}
         onChange={(e) => {
           setAmount(`${e.target.value}`);
         }}
       />
       <button
-        type='primary'
-        size='large'
-        style={{ height: "5%", width: "15%", background: "#b8daff", color: "black", borderRadius: "5px", borderWidth: "2px" }}
+        type="primary"
+        size="large"
+        style={{
+          height: "4%",
+          width: "15",
+          background: "#b8daff",
+          color: "black",
+          borderRadius: "5px",
+          borderWidth: "2px",
+        }}
         loading={isPending}
         onClick={() => DoDonate("donate")}
         disabled={!tx}
       >
-        Send
+        <span>
+          <img
+            alt="Matic"
+            src={Matic}
+            style={{
+              width: "1.5rem",
+              height: "1.5rem",
+              marginLeft: "0.5rem",
+            }}
+          />
+        </span>
       </button>
       <>{postDonates}</>
     </div>
