@@ -101,11 +101,14 @@ function Donate(props) {
         size="large"
         style={{
           height: "4%",
-          width: "15",
+          width: "20",
           background: "#b8daff",
-          color: "black",
+          //color: "black",
+          padding: "3.5px",
           borderRadius: "5px",
           borderWidth: "2px",
+          position: "relative",
+          top: "0.3rem"
         }}
         loading={isPending}
         onClick={() => DoDonate("donate")}
