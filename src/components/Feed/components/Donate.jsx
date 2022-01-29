@@ -6,7 +6,7 @@ import {
 } from "react-moralis";
 import { useEffect, useState } from "react";
 import { Input, message } from "antd";
-import Matic from "../img/maticToken.png";
+import Avax from "../img/AvaxToken.png";
 
 function Donate(props) {
   const { Moralis } = useMoralis();
@@ -113,8 +113,8 @@ function Donate(props) {
       >
         <span>
           <img
-            alt="Matic"
-            src={Matic}
+            alt="Avax"
+            src={Avax}
             style={{
               width: "1.5rem",
               height: "1.5rem",

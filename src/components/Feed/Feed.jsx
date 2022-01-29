@@ -18,7 +18,7 @@ const Feed = () => {
 
   if (selectedCategory["category"] === "default") {
     result = (
-      <div className='col-lg-9'>
+      <div className="col-lg-9">
         <div
           style={{
             ...glStyles.card,
@@ -42,46 +42,51 @@ const Feed = () => {
                 }}
               >
                 <img
-                  style={{ display: "inline-block", verticalAlign: "middle", marginLeft: "10rem" }}
+                  style={{
+                    display: "inline-block",
+                    verticalAlign: "middle",
+                    marginLeft: "10rem",
+                  }}
                   src={
                     "https://content.presspage.com/uploads/2658/c800_logo-stackoverflow-square.jpg?98978"
                   }
-                  alt='Polytter'
-                  width='200'
-                  height='200'
+                  alt="Polytter"
+                  width="200"
+                  height="200"
                 />
               </p>
-              <div style={{textAlign: "center", marginLeft: "11rem", fontFamily: "Libre Baskerville"}}>
-              <Title level={3}>
-              Stack Overflow 3.0
-              </Title>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginLeft: "11rem",
+                  fontFamily: "Libre Baskerville",
+                }}
+              >
+                <Title level={3}>Stack Overflow 3.0</Title>
               </div>
             </Paragraph>
             <Paragraph>
-            <p style={
-                {
+              <p
+                style={{
                   paddingBottom: "3rem",
-                }
-              } />
-            Post your questions !! 
+                }}
+              />
+              Post your questions !!
             </Paragraph>
             <Paragraph>
               Reputation system works on the basis of upvotes and downvotes.
             </Paragraph>
-            <Paragraph>
-              {" "}
-              Currently works on Polygon Mumbai Testnet. 
-            </Paragraph>
+            <Paragraph> Currently works on Avalanche Testnet.</Paragraph>
 
-            <div style={{textAlign: "center", marginLeft: "11rem"}}>
-            <Title level={5}>
-            <p style={
-                {
-                  paddingBottom: "3rem",
-                }
-              } />
-              Choose the categories and start exploring!
-            </Title>
+            <div style={{ textAlign: "center", marginLeft: "11rem" }}>
+              <Title level={5}>
+                <p
+                  style={{
+                    paddingBottom: "3rem",
+                  }}
+                />
+                Choose the categories and start exploring!
+              </Title>
             </div>
           </Typography>
         </div>
@@ -89,7 +94,7 @@ const Feed = () => {
     );
   } else {
     result = (
-      <div className='col-lg-9'>
+      <div className="col-lg-9">
         <div
           style={{
             ...glStyles.card,
@@ -100,11 +105,11 @@ const Feed = () => {
             justifyContent: "space-between",
           }}
         >
-          <h4 style={{fontFamily: "Libre Baskerville"}}>
+          <h4 style={{ fontFamily: "Libre Baskerville" }}>
             {" "}
             Your Reputation in {selectedCategory["category"]} is <Reputation />{" "}
           </h4>
-          <Button shape='round' onClick={toogleShowAddPost}>
+          <Button shape="round" onClick={toogleShowAddPost}>
             Post
           </Button>
         </div>
