@@ -45,7 +45,6 @@ const Feed = () => {
                   style={{
                     display: "inline-block",
                     verticalAlign: "middle",
-                    marginLeft: "10rem",
                   }}
                   src={
                     "https://content.presspage.com/uploads/2658/c800_logo-stackoverflow-square.jpg?98978"
@@ -58,35 +57,55 @@ const Feed = () => {
               <div
                 style={{
                   textAlign: "center",
-                  marginLeft: "11rem",
                   fontFamily: "Libre Baskerville",
                 }}
               >
-                <Title level={3}>Stack Overflow 3.0</Title>
+                <Title level={6}>Stack Overflow 3.0</Title>
               </div>
             </Paragraph>
-            <Paragraph>
+            <Paragraph style={{textAlign: "center"}}>
               <p
                 style={{
                   paddingBottom: "3rem",
                 }}
               />
-              Post your questions !!
+              <p style={{fontSize: "1.1rem"}}>Post your questions !!</p>
             </Paragraph>
-            <Paragraph>
-              Reputation system works on the basis of upvotes and downvotes.
+            <Paragraph style={{textAlign: "center"}}>
+            <p style={{fontSize: "1.1rem"}}>Reputation system works on the basis of upvotes and downvotes.</p>
             </Paragraph>
-            <Paragraph> Currently works on Avalanche Testnet.</Paragraph>
+            <Paragraph style={{textAlign: "center"}}> 
+            <p style={{fontSize: "1.1rem"}}>Currently works on Avalanche Testnet.</p>
+            </Paragraph>
 
-            <div style={{ textAlign: "center", marginLeft: "11rem" }}>
-              <Title level={5}>
+            <div style={{textAlign: "center"}}>
+            <Title level={5}>
+                <p/>
                 <p
-                  style={{
-                    paddingBottom: "3rem",
-                  }}
-                />
-                Choose the categories and start exploring!
+                style={{fontSize: "1.5rem", paddingTop: "3rem"}}
+                >Choose the categories and start exploring!</p>
               </Title>
+            </div>
+            <div style={{display: "flex"}}>
+            <img
+                  style={{
+                    //display: "inline-block",
+                    verticalAlign: "middle",
+                    //zIndex: 1,
+                    position: "relative",
+                    top: "3.5rem",
+                    left: "4.5rem"
+                  }}
+                  src={
+                    "https://cdn.sstatic.net/Img/product/teams/screens/illo-for-you.png?v=ab49238abe04"
+                  }
+                  alt="stack"
+                  width="550"
+                  height="300"
+                />
+            </div>
+
+            <div style={{backgroundColor: "black", height: "100px", width: "700px"}}>
             </div>
           </Typography>
         </div>
