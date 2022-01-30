@@ -26,7 +26,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "devchain": "node Truffle/scripts/devChain.js",
-    "connect": "moralis-admin-cli connect-local-devchain",
     "watch:events": "moralis-admin-cli add-contract",
     "deploy": "node Truffle/scripts/deployContract.js"
   },
